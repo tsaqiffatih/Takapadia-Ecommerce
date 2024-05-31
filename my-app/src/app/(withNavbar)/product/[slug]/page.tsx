@@ -4,13 +4,37 @@ import StartRating from "@/components/ComponentRating";
 import SocialMedia from "@/components/ComponentSocialMedia";
 import { ProductData } from "@/interfaces";
 import { productSchema, typeProduct } from "@/validators/productValidator";
-import { Metadata } from "next";
+import { Metadata, ResolvingMetadata } from "next";
 import Image from "next/image";
 import React from "react";
 
 interface ProductDetailParams {
 	params: {
 		slug: string;
+	};
+}
+
+export async function generateMetadata(
+	{ params }: ProductDetailParams,
+	parent: ResolvingMetadata
+): Promise<Metadata> {
+	const data = await getData(params.slug);
+	return {
+		title: data.name,
+		description: data.description,
+		openGraph: {
+			title: data.name,
+			description: data.description,
+			images: [
+				{
+					url:
+						Array.isArray(data.images) && data.images.length > 0
+							? data.images[0]
+							: "",
+					alt: data.name,
+				},
+			],
+		},
 	};
 }
 
@@ -21,47 +45,26 @@ async function getData(slug: string): Promise<ProductData> {
 			cache: "no-cache",
 		}
 	);
-	// The return value is *not* serialized
-	// You can return Date, Map, Set, etc.
 
 	if (!res.ok) {
-		// This will activate the closest `error.js` Error Boundary
 		throw new Error("Failed to fetch data");
 	}
-	const {data} : {data: ProductData} = await res.json()
-	return data
+	const { data }: { data: ProductData } = await res.json();
+	return data;
 }
-
-// export async function generateMetadata({ params }: ProductDetailParams): Promise<Metadata> {
-// 	const data = await getData(params.slug);
-// 	return {
-// 		title: data.name, // Atur judul halaman berdasarkan nama produk
-// 		description: data.description, // Atur deskripsi halaman berdasarkan deskripsi produk
-// 		openGraph: {
-// 			title: data.name,
-// 			description: data.description,
-// 			images: [
-// 				{
-// 					url: data.images,
-// 					alt: data.name,
-// 				},
-// 			],
-// 		},
-// 	};
-// }
 
 export default async function DetailProductPage({
 	params,
 }: ProductDetailParams) {
 	const data = await getData(params.slug);
-	
-	const formatCurrency = (price:number) => {
-		let rupiahFormat = new Intl.NumberFormat('id-ID', {
-			style: 'currency',
-			currency: 'IDR',
-		  }).format(price);
+
+	const formatCurrency = (price: number) => {
+		let rupiahFormat = new Intl.NumberFormat("id-ID", {
+			style: "currency",
+			currency: "IDR",
+		}).format(price);
 		return rupiahFormat;
-	}
+	};
 
 	// console.log(formatCurrency(data.price));
 
@@ -72,7 +75,7 @@ export default async function DetailProductPage({
 					<Image
 						alt="ecommerce"
 						className="lg:w-1/2 w-full object-cover object-center rounded border border-black"
-						src={data.images[0]}
+						src={data.images ? data.images[0] : ""}
 						width={400}
 						height={400}
 					/>
@@ -91,13 +94,13 @@ export default async function DetailProductPage({
 						<ColorOption />
 						<div className="flex items-center">
 							<span className="title-font font-medium text-2xl text-gray-900">
-								{formatCurrency(data.price)}
+								{formatCurrency(data.price ?? 0)}
 							</span>
 							<button className="flex ml-auto text-black font-semibold border border-black py-2 px-6 hover:bg-red-600 rounded">
 								Buy
 							</button>
 							<span className="ml-4"></span>
-							<AddToWishlist />
+							<AddToWishlist productId={data._id} />
 						</div>
 					</div>
 				</div>

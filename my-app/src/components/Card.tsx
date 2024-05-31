@@ -3,11 +3,12 @@ import Link from "next/link";
 import Image from "next/image";
 import AddToWishlist from "./ButtonWishList";
 import { typeProduct } from "@/validators/productValidator";
+import { ProductData } from "@/interfaces";
 
 export default function Card({
 	product,
 }: {
-	product: typeProduct;
+	product: ProductData;
 }) {
 
 	const formatCurrency = (price: number | undefined) => {
@@ -54,7 +55,7 @@ export default function Card({
 							See details
 						</Link>
 					</div>
-					<AddToWishlist />
+					<AddToWishlist productId={product._id}/>
 				</div>
 			</div>
 		</div>

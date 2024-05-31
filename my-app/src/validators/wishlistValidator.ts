@@ -8,8 +8,6 @@ export const wishlistSchema = z.object({
 	productId: z
 		.string()
 		.min(1, { message: "The Product ID cannot be empty" }),
-	createdAt: z.date().optional(),
-	updatedAt: z.date().optional(),
 });
 
 export type typeWishlist = z.infer<typeof wishlistSchema>;
