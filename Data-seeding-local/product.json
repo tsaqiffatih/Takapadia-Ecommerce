@@ -1,0 +1,691 @@
+[
+	{
+		"name": "Gorgeous Wooden Chair",
+		"slug": "gorgeous-wooden-chair",
+		"description": "A very comfortable wooden chair",
+		"excerpt": "Comfortable chair",
+		"price": 150000,
+		"tags": ["furniture", "wood", "chair"],
+		"thumbnail": "https://loremflickr.com/400/400/cats",
+		"images": [
+			"https://loremflickr.com/400/400/abstract",
+			"https://loremflickr.com/400/400/cats",
+			"https://loremflickr.com/400/400/food",
+			"https://loremflickr.com/400/400/transport",
+			"https://loremflickr.com/400/400/food"
+		],
+		"createdAt": "2023-01-01T00:00:00.000Z",
+		"updatedAt": "2023-01-01T00:00:00.000Z"
+	},
+	{
+		"name": "Elegant Leather Sofa",
+		"slug": "elegant-leather-sofa",
+		"description": "An elegant sofa made of genuine leather, perfect for your living room",
+		"excerpt": "Luxurious leather sofa",
+		"price": 800000,
+		"tags": ["furniture", "leather", "sofa", "living room"],
+		"thumbnail": "https://loremflickr.com/400/400/business",
+		"images": [
+			"https://loremflickr.com/400/400/transport",
+			"https://loremflickr.com/400/400/business",
+			"https://loremflickr.com/400/400/animals",
+			"https://loremflickr.com/400/400/business",
+			"https://loremflickr.com/400/400/cats"
+		],
+		"createdAt": "2023-05-15T00:00:00.000Z",
+		"updatedAt": "2023-05-15T00:00:00.000Z"
+	},
+	{
+		"name": "Modern Glass Dining Table",
+		"slug": "modern-glass-dining-table",
+		"description": "A sleek and modern dining table with a tempered glass top",
+		"excerpt": "Stylish glass dining table",
+		"price": 500000,
+		"tags": ["furniture", "glass", "dining table", "modern"],
+		"thumbnail": "https://loremflickr.com/400/400/food",
+		"images": [
+			"https://loremflickr.com/400/400/nature",
+			"https://loremflickr.com/400/400/city",
+			"https://loremflickr.com/400/400/technics",
+			"https://loremflickr.com/400/400/food",
+			"https://loremflickr.com/400/400/sports"
+		],
+		"createdAt": "2023-03-10T00:00:00.000Z",
+		"updatedAt": "2023-03-10T00:00:00.000Z"
+	},
+	{
+		"name": "Vintage Wooden Bookshelf",
+		"slug": "vintage-wooden-bookshelf",
+		"description": "A charming vintage bookshelf crafted from solid wood, perfect for displaying your book collection",
+		"excerpt": "Classic wooden bookshelf",
+		"price": 350000,
+		"tags": ["furniture", "wood", "bookshelf", "vintage"],
+		"thumbnail": "https://loremflickr.com/400/400/cats",
+		"images": [
+			"https://loremflickr.com/400/400/cats",
+			"https://loremflickr.com/400/400/cats",
+			"https://loremflickr.com/400/400/cats",
+			"https://loremflickr.com/400/400/food",
+			"https://loremflickr.com/400/400/food"
+		],
+		"createdAt": "2023-02-20T00:00:00.000Z",
+		"updatedAt": "2023-02-20T00:00:00.000Z"
+	},
+	{
+		"name": "Rustic Metal Coffee Table",
+		"slug": "rustic-metal-coffee-table",
+		"description": "A rustic coffee table with a durable metal frame, perfect for a cozy living room",
+		"excerpt": "Sturdy metal coffee table",
+		"price": 250000,
+		"tags": ["furniture", "metal", "coffee table", "rustic"],
+		"thumbnail": "https://loremflickr.com/400/400/cats",
+		"images": [
+			"https://loremflickr.com/400/400/city",
+			"https://loremflickr.com/400/400/food",
+			"https://loremflickr.com/400/400/sports",
+			"https://loremflickr.com/400/400/transport",
+			"https://loremflickr.com/400/400/abstract"
+		],
+		"createdAt": "2023-04-05T00:00:00.000Z",
+		"updatedAt": "2023-04-05T00:00:00.000Z"
+	},
+	{
+		"name": "Cozy Fabric Armchair",
+		"slug": "cozy-fabric-armchair",
+		"description": "A cozy armchair with soft fabric upholstery, perfect for lounging",
+		"excerpt": "Comfortable fabric armchair",
+		"price": 300000,
+		"tags": ["furniture", "fabric", "armchair", "cozy"],
+		"thumbnail": "https://loremflickr.com/400/400/cats",
+		"images": [
+			"https://loremflickr.com/400/400/sports",
+			"https://loremflickr.com/400/400/abstract",
+			"https://loremflickr.com/400/400/animals",
+			"https://loremflickr.com/400/400/business",
+			"https://loremflickr.com/400/400/transport"
+		],
+		"createdAt": "2023-06-20T00:00:00.000Z",
+		"updatedAt": "2023-06-20T00:00:00.000Z"
+	},
+	{
+		"name": "Minimalist Desk Lamp",
+		"slug": "minimalist-desk-lamp",
+		"description": "A sleek and minimalist desk lamp with adjustable brightness settings",
+		"excerpt": "Modern desk lamp",
+		"price": 50000,
+		"tags": ["lighting", "desk lamp", "modern"],
+		"thumbnail": "https://loremflickr.com/400/400/transport",
+		"images": [
+			"https://loremflickr.com/400/400/food",
+			"https://loremflickr.com/400/400/cats",
+			"https://loremflickr.com/400/400/food",
+			"https://loremflickr.com/400/400/business",
+			"https://loremflickr.com/400/400/transport"
+		],
+		"createdAt": "2023-07-10T00:00:00.000Z",
+		"updatedAt": "2023-07-10T00:00:00.000Z"
+	},
+	{
+		"name": "Vintage Wall Clock",
+		"slug": "vintage-wall-clock",
+		"description": "A vintage-style wall clock with Roman numeral markers, adds a touch of nostalgia to your home decor",
+		"excerpt": "Classic wall clock",
+		"price": 80000,
+		"tags": ["decor", "wall clock", "vintage"],
+		"thumbnail": "https://loremflickr.com/400/400/cats",
+		"images": [
+			"https://loremflickr.com/400/400/transport",
+			"https://loremflickr.com/400/400/food",
+			"https://loremflickr.com/400/400/nature",
+			"https://loremflickr.com/400/400/city",
+			"https://loremflickr.com/400/400/sports"
+		],
+		"createdAt": "2023-08-15T00:00:00.000Z",
+		"updatedAt": "2023-08-15T00:00:00.000Z"
+	},
+	{
+		"name": "Modern Glass Vase",
+		"slug": "modern-glass-vase",
+		"description": "A modern glass vase with clean lines, perfect for displaying flowers or as a standalone decorative piece",
+		"excerpt": "Sleek glass vase",
+		"price": 40000,
+		"tags": ["decor", "glass", "vase", "modern"],
+		"thumbnail": "https://loremflickr.com/400/400/transport",
+		"images": [
+			"https://loremflickr.com/400/400/food",
+			"https://loremflickr.com/400/400/cats",
+			"https://loremflickr.com/400/400/food",
+			"https://loremflickr.com/400/400/business",
+			"https://loremflickr.com/400/400/transport"
+		],
+		"createdAt": "2023-09-05T00:00:00.000Z",
+		"updatedAt": "2023-09-05T00:00:00.000Z"
+	},
+	{
+		"name": "Soft Cotton Throw Pillow",
+		"slug": "soft-cotton-throw-pillow",
+		"description": "A soft and comfortable cotton throw pillow, adds a cozy touch to your sofa or bed",
+		"excerpt": "Comfortable throw pillow",
+		"price": 20000,
+		"tags": ["decor", "cotton", "throw pillow", "cozy"],
+		"thumbnail": "https://loremflickr.com/400/400/transport",
+		"images": [
+			"https://loremflickr.com/400/400/food",
+			"https://loremflickr.com/400/400/cats",
+			"https://loremflickr.com/400/400/food",
+			"https://loremflickr.com/400/400/business",
+			"https://loremflickr.com/400/400/transport"
+		],
+		"createdAt": "2023-10-20T00:00:00.000Z",
+		"updatedAt": "2023-10-20T00:00:00.000Z"
+	},
+	{
+		"name": "Rustic Wooden Picture Frame",
+		"slug": "rustic-wooden-picture-frame",
+		"description": "A rustic wooden picture frame with distressed finish, perfect for showcasing your favorite memories",
+		"excerpt": "Classic wooden picture frame",
+		"price": 30000,
+		"tags": ["decor", "wood", "picture frame", "rustic"],
+		"thumbnail": "https://loremflickr.com/400/400/transport",
+		"images": [
+			"https://loremflickr.com/400/400/food",
+			"https://loremflickr.com/400/400/cats",
+			"https://loremflickr.com/400/400/food",
+			"https://loremflickr.com/400/400/business",
+			"https://loremflickr.com/400/400/transport"
+		],
+		"createdAt": "2023-11-10T00:00:00.000Z",
+		"updatedAt": "2023-11-10T00:00:00.000Z"
+	},
+	{
+		"name": "Contemporary Ceramic Plant Pot",
+		"slug": "contemporary-ceramic-plant-pot",
+		"description": "A contemporary ceramic plant pot with clean lines, perfect for indoor plants",
+		"excerpt": "Stylish ceramic plant pot",
+		"price": 25000,
+		"tags": ["decor", "ceramic", "plant pot", "contemporary"],
+		"thumbnail": "https://loremflickr.com/400/400/transport",
+		"images": [
+			"https://loremflickr.com/400/400/food",
+			"https://loremflickr.com/400/400/cats",
+			"https://loremflickr.com/400/400/food",
+			"https://loremflickr.com/400/400/business",
+			"https://loremflickr.com/400/400/transport"
+		],
+		"createdAt": "2023-12-05T00:00:00.000Z",
+		"updatedAt": "2023-12-05T00:00:00.000Z"
+	},
+	{
+		"name": "Antique Brass Candle Holder",
+		"slug": "antique-brass-candle-holder",
+		"description": "An antique brass candle holder with intricate detailing, adds a touch of elegance to your decor",
+		"excerpt": "Elegant brass candle holder",
+		"price": 35000,
+		"tags": ["decor", "brass", "candle holder", "antique"],
+		"thumbnail": "https://loremflickr.com/400/400/transport",
+		"images": [
+			"https://loremflickr.com/400/400/food",
+			"https://loremflickr.com/400/400/cats",
+			"https://loremflickr.com/400/400/food",
+			"https://loremflickr.com/400/400/business",
+			"https://loremflickr.com/400/400/transport"
+		],
+		"createdAt": "2024-01-15T00:00:00.000Z",
+		"updatedAt": "2024-01-15T00:00:00.000Z"
+	},
+	{
+		"name": "Handcrafted Ceramic Mug Set",
+		"slug": "handcrafted-ceramic-mug-set",
+		"description": "A set of handcrafted ceramic mugs with unique glaze patterns, perfect for enjoying your favorite beverages",
+		"excerpt": "Artisan ceramic mug set",
+		"price": 45000,
+		"tags": ["kitchen", "ceramic", "mug", "handcrafted"],
+		"thumbnail": "https://loremflickr.com/400/400/transport",
+		"images": [
+			"https://loremflickr.com/400/400/food",
+			"https://loremflickr.com/400/400/cats",
+			"https://loremflickr.com/400/400/food",
+			"https://loremflickr.com/400/400/business",
+			"https://loremflickr.com/400/400/transport"
+		],
+		"createdAt": "2024-02-20T00:00:00.000Z",
+		"updatedAt": "2024-02-20T00:00:00.000Z"
+	},
+	{
+		"name": "Stainless Steel Kitchen Knife Set",
+		"slug": "stainless-steel-kitchen-knife-set",
+		"description": "A set of high-quality stainless steel kitchen knives with ergonomic handles, essential for any kitchen",
+		"excerpt": "Durable knife set",
+		"price": 75000,
+		"tags": ["kitchen", "stainless steel", "knife set"],
+		"thumbnail": "https://loremflickr.com/400/400/transport",
+		"images": [
+			"https://loremflickr.com/400/400/food",
+			"https://loremflickr.com/400/400/cats",
+			"https://loremflickr.com/400/400/food",
+			"https://loremflickr.com/400/400/business",
+			"https://loremflickr.com/400/400/transport"
+		],
+		"createdAt": "2024-03-10T00:00:00.000Z",
+		"updatedAt": "2024-03-10T00:00:00.000Z"
+	},
+	{
+		"name": "Cotton Kitchen Towel Set",
+		"slug": "cotton-kitchen-towel-set",
+		"description": "A set of soft and absorbent cotton kitchen towels, perfect for drying dishes or hands",
+		"excerpt": "Absorbent kitchen towel set",
+		"price": 15000,
+		"tags": ["kitchen", "cotton", "kitchen towel", "absorbent"],
+		"thumbnail": "https://loremflickr.com/400/400/transport",
+		"images": [
+			"https://loremflickr.com/400/400/food",
+			"https://loremflickr.com/400/400/cats",
+			"https://loremflickr.com/400/400/food",
+			"https://loremflickr.com/400/400/business",
+			"https://loremflickr.com/400/400/transport"
+		],
+		"createdAt": "2024-04-05T00:00:00.000Z",
+		"updatedAt": "2024-04-05T00:00:00.000Z"
+	},
+	{
+		"name": "Electric Hand Mixer",
+		"slug": "electric-hand-mixer",
+		"description": "An electric hand mixer with multiple speed settings, perfect for baking and cooking",
+		"excerpt": "Versatile hand mixer",
+		"price": 40000,
+		"tags": ["kitchen", "electric", "hand mixer", "baking"],
+		"thumbnail": "https://loremflickr.com/400/400/transport",
+		"images": [
+			"https://loremflickr.com/400/400/food",
+			"https://loremflickr.com/400/400/cats",
+			"https://loremflickr.com/400/400/food",
+			"https://loremflickr.com/400/400/business",
+			"https://loremflickr.com/400/400/transport"
+		],
+		"createdAt": "2024-05-15T00:00:00.000Z",
+		"updatedAt": "2024-05-15T00:00:00.000Z"
+	},
+	{
+		"name": "Digital Kitchen Scale",
+		"slug": "digital-kitchen-scale",
+		"description": "A digital kitchen scale with precise measurement capabilities, essential for accurate cooking and baking",
+		"excerpt": "Precise kitchen scale",
+		"price": 30000,
+		"tags": ["kitchen", "digital", "kitchen scale", "precision"],
+		"thumbnail": "https://loremflickr.com/400/400/transport",
+		"images": [
+			"https://loremflickr.com/400/400/food",
+			"https://loremflickr.com/400/400/cats",
+			"https://loremflickr.com/400/400/food",
+			"https://loremflickr.com/400/400/business",
+			"https://loremflickr.com/400/400/transport"
+		],
+		"createdAt": "2024-06-20T00:00:00.000Z",
+		"updatedAt": "2024-06-20T00:00:00.000Z"
+	},
+	{
+		"name": "Organic Bamboo Cutting Board",
+		"slug": "organic-bamboo-cutting-board",
+		"description": "An organic bamboo cutting board with a durable and eco-friendly design, perfect for food preparation",
+		"excerpt": "Eco-friendly cutting board",
+		"price": 25000,
+		"tags": ["kitchen", "bamboo", "cutting board", "organic"],
+		"thumbnail": "https://loremflickr.com/400/400/transport",
+		"images": [
+			"https://loremflickr.com/400/400/food",
+			"https://loremflickr.com/400/400/cats",
+			"https://loremflickr.com/400/400/food",
+			"https://loremflickr.com/400/400/business",
+			"https://loremflickr.com/400/400/transport"
+		],
+		"createdAt": "2024-07-10T00:00:00.000Z",
+		"updatedAt": "2024-07-10T00:00:00.000Z"
+	},
+	{
+		"name": "Indoor Herb Garden Kit",
+		"slug": "indoor-herb-garden-kit",
+		"description": "An indoor herb garden kit with everything you need to grow fresh herbs right in your kitchen",
+		"excerpt": "Convenient herb garden kit",
+		"price": 35000,
+		"tags": ["kitchen", "herb garden", "indoor gardening"],
+		"thumbnail": "https://loremflickr.com/400/400/transport",
+		"images": [
+			"https://loremflickr.com/400/400/food",
+			"https://loremflickr.com/400/400/cats",
+			"https://loremflickr.com/400/400/food",
+			"https://loremflickr.com/400/400/business",
+			"https://loremflickr.com/400/400/transport"
+		],
+		"createdAt": "2024-08-15T00:00:00.000Z",
+		"updatedAt": "2024-08-15T00:00:00.000Z"
+	},
+	{
+		"name": "Vintage Brass Floor Lamp",
+		"slug": "vintage-brass-floor-lamp",
+		"description": "A vintage-style floor lamp with brass finish, adds a touch of sophistication to your living space",
+		"excerpt": "Classic brass floor lamp",
+		"price": 200000,
+		"tags": ["lighting", "floor lamp", "vintage", "brass"],
+		"thumbnail": "https://loremflickr.com/400/400/transport",
+		"images": [
+			"https://loremflickr.com/400/400/food",
+			"https://loremflickr.com/400/400/cats",
+			"https://loremflickr.com/400/400/food",
+			"https://loremflickr.com/400/400/business",
+			"https://loremflickr.com/400/400/transport"
+		],
+		"createdAt": "2024-09-01T00:00:00.000Z",
+		"updatedAt": "2024-09-01T00:00:00.000Z"
+	},
+	{
+		"name": "Retro Vinyl Record Player",
+		"slug": "retro-vinyl-record-player",
+		"description": "A retro-style vinyl record player with built-in speakers, perfect for playing your favorite records",
+		"excerpt": "Vintage vinyl record player",
+		"price": 300000,
+		"tags": ["electronics", "vinyl record player", "retro", "music"],
+		"thumbnail": "https://loremflickr.com/400/400/abstract",
+		"images": [
+			"https://loremflickr.com/400/400/cats",
+			"https://loremflickr.com/400/400/cats",
+			"https://loremflickr.com/400/400/food",
+			"https://loremflickr.com/400/400/cats",
+			"https://loremflickr.com/400/400/food"
+		],
+		"createdAt": "2024-10-10T00:00:00.000Z",
+		"updatedAt": "2024-10-10T00:00:00.000Z"
+	},
+	{
+		"name": "Handwoven Jute Rug",
+		"slug": "handwoven-jute-rug",
+		"description": "A handwoven jute rug with natural fibers, adds warmth and texture to your floors",
+		"excerpt": "Natural jute rug",
+		"price": 100000,
+		"tags": ["decor", "rug", "jute", "handwoven"],
+		"thumbnail": "https://loremflickr.com/400/400/abstract",
+		"images": [
+			"https://loremflickr.com/400/400/cats",
+			"https://loremflickr.com/400/400/cats",
+			"https://loremflickr.com/400/400/food",
+			"https://loremflickr.com/400/400/cats",
+			"https://loremflickr.com/400/400/food"
+		],
+		"createdAt": "2024-11-05T00:00:00.000Z",
+		"updatedAt": "2024-11-05T00:00:00.000Z"
+	},
+	{
+		"name": "Mid-Century Modern Sideboard",
+		"slug": "mid-century-modern-sideboard",
+		"description": "A mid-century modern sideboard with sleek design and ample storage space, perfect for your dining room",
+		"excerpt": "Stylish sideboard",
+		"price": 600000,
+		"tags": [
+			"furniture",
+			"sideboard",
+			"mid-century modern",
+			"storage"
+		],
+		"thumbnail": "https://loremflickr.com/400/400/abstract",
+		"images": [
+			"https://loremflickr.com/400/400/cats",
+			"https://loremflickr.com/400/400/cats",
+			"https://loremflickr.com/400/400/food",
+			"https://loremflickr.com/400/400/cats",
+			"https://loremflickr.com/400/400/food"
+		],
+		"createdAt": "2024-12-01T00:00:00.000Z",
+		"updatedAt": "2024-12-01T00:00:00.000Z"
+	},
+	{
+		"name": "Industrial Bar Stool",
+		"slug": "industrial-bar-stool",
+		"description": "An industrial-style bar stool with metal frame and wooden seat, adds a modern touch to your bar or kitchen counter",
+		"excerpt": "Modern bar stool",
+		"price": 80000,
+		"tags": ["furniture", "bar stool", "industrial", "metal"],
+		"thumbnail": "https://loremflickr.com/400/400/abstract",
+		"images": [
+			"https://loremflickr.com/400/400/cats",
+			"https://loremflickr.com/400/400/cats",
+			"https://loremflickr.com/400/400/food",
+			"https://loremflickr.com/400/400/cats",
+			"https://loremflickr.com/400/400/food"
+		],
+		"createdAt": "2025-01-15T00:00:00.000Z",
+		"updatedAt": "2025-01-15T00:00:00.000Z"
+	},
+	{
+		"name": "Modern Wall Mirror",
+		"slug": "modern-wall-mirror",
+		"description": "A modern wall mirror with minimalist design, adds depth and style to any room",
+		"excerpt": "Sleek wall mirror",
+		"price": 120000,
+		"tags": ["decor", "wall mirror", "modern"],
+		"thumbnail": "https://loremflickr.com/400/400/abstract",
+		"images": [
+			"https://loremflickr.com/400/400/cats",
+			"https://loremflickr.com/400/400/cats",
+			"https://loremflickr.com/400/400/food",
+			"https://loremflickr.com/400/400/cats",
+			"https://loremflickr.com/400/400/food"
+		],
+		"createdAt": "2025-02-10T00:00:00.000Z",
+		"updatedAt": "2025-02-10T00:00:00.000Z"
+	},
+	{
+		"name": "Art Deco Table Lamp",
+		"slug": "art-deco-table-lamp",
+		"description": "An art deco-inspired table lamp with geometric design, adds elegance to your bedside table or desk",
+		"excerpt": "Elegant table lamp",
+		"price": 70000,
+		"tags": ["lighting", "table lamp", "art deco"],
+		"thumbnail": "https://loremflickr.com/400/400/abstract",
+		"images": [
+			"https://loremflickr.com/400/400/cats",
+			"https://loremflickr.com/400/400/cats",
+			"https://loremflickr.com/400/400/food",
+			"https://loremflickr.com/400/400/cats",
+			"https://loremflickr.com/400/400/food"
+		],
+		"createdAt": "2025-03-05T00:00:00.000Z",
+		"updatedAt": "2025-03-05T00:00:00.000Z"
+	},
+	{
+		"name": "Bohemian Throw Blanket",
+		"slug": "bohemian-throw-blanket",
+		"description": "A bohemian-style throw blanket with colorful patterns, adds a vibrant touch to your sofa or bed",
+		"excerpt": "Colorful throw blanket",
+		"price": 50000,
+		"tags": ["decor", "throw blanket", "bohemian"],
+		"thumbnail": "https://loremflickr.com/400/400/abstract",
+		"images": [
+			"https://loremflickr.com/400/400/cats",
+			"https://loremflickr.com/400/400/cats",
+			"https://loremflickr.com/400/400/food",
+			"https://loremflickr.com/400/400/cats",
+			"https://loremflickr.com/400/400/food"
+		],
+		"createdAt": "2025-04-01T00:00:00.000Z",
+		"updatedAt": "2025-04-01T00:00:00.000Z"
+	},
+	{
+		"name": "Scandinavian Style Dining Chair",
+		"slug": "scandinavian-style-dining-chair",
+		"description": "A Scandinavian-style dining chair with clean lines and wooden legs, offers both style and comfort",
+		"excerpt": "Stylish dining chair",
+		"price": 90000,
+		"tags": ["furniture", "dining chair", "scandinavian", "wood"],
+		"thumbnail": "https://loremflickr.com/400/400/abstract",
+		"images": [
+			"https://loremflickr.com/400/400/cats",
+			"https://loremflickr.com/400/400/cats",
+			"https://loremflickr.com/400/400/food",
+			"https://loremflickr.com/400/400/cats",
+			"https://loremflickr.com/400/400/food"
+		],
+		"createdAt": "2025-05-15T00:00:00.000Z",
+		"updatedAt": "2025-05-15T00:00:00.000Z"
+	},
+	{
+		"name": "Vintage Ceramic Tea Set",
+		"slug": "vintage-ceramic-tea-set",
+		"description": "A vintage-style ceramic tea set with floral patterns, perfect for afternoon tea with friends",
+		"excerpt": "Classic tea set",
+		"price": 60000,
+		"tags": ["kitchen", "tea set", "ceramic", "vintage"],
+		"thumbnail": "https://loremflickr.com/400/400/abstract",
+		"images": [
+			"https://loremflickr.com/400/400/cats",
+			"https://loremflickr.com/400/400/cats",
+			"https://loremflickr.com/400/400/food",
+			"https://loremflickr.com/400/400/cats",
+			"https://loremflickr.com/400/400/food"
+		],
+		"createdAt": "2025-06-01T00:00:00.000Z",
+		"updatedAt": "2025-06-01T00:00:00.000Z"
+	},
+	{
+		"name": "Coastal Style Throw Pillow",
+		"slug": "coastal-style-throw-pillow",
+		"description": "A coastal-style throw pillow with nautical motifs, adds a seaside charm to your home decor",
+		"excerpt": "Nautical throw pillow",
+		"price": 25000,
+		"tags": ["decor", "throw pillow", "coastal", "nautical"],
+		"thumbnail": "https://loremflickr.com/400/400/abstract",
+		"images": [
+			"https://loremflickr.com/400/400/cats",
+			"https://loremflickr.com/400/400/cats",
+			"https://loremflickr.com/400/400/food",
+			"https://loremflickr.com/400/400/cats",
+			"https://loremflickr.com/400/400/food"
+		],
+		"createdAt": "2025-07-10T00:00:00.000Z",
+		"updatedAt": "2025-07-10T00:00:00.000Z"
+	},
+	{
+		"name": "Modern Stainless Steel Flatware Set",
+		"slug": "modern-stainless-steel-flatware-set",
+		"description": "A modern stainless steel flatware set with sleek design, perfect for everyday dining or special occasions",
+		"excerpt": "Sleek flatware set",
+		"price": 70000,
+		"tags": ["kitchen", "flatware set", "stainless steel", "modern"],
+		"thumbnail": "https://loremflickr.com/400/400/abstract",
+		"images": [
+			"https://loremflickr.com/400/400/cats",
+			"https://loremflickr.com/400/400/cats",
+			"https://loremflickr.com/400/400/food",
+			"https://loremflickr.com/400/400/cats",
+			"https://loremflickr.com/400/400/food"
+		],
+		"createdAt": "2025-08-05T00:00:00.000Z",
+		"updatedAt": "2025-08-05T00:00:00.000Z"
+	},
+	{
+		"name": "Contemporary Glass Coffee Table",
+		"slug": "contemporary-glass-coffee-table",
+		"description": "A contemporary glass coffee table with geometric base, adds a modern touch to your living room",
+		"excerpt": "Modern glass coffee table",
+		"price": 180000,
+		"tags": ["furniture", "glass", "coffee table", "contemporary"],
+		"thumbnail": "https://loremflickr.com/400/400/abstract",
+		"images": [
+			"https://loremflickr.com/400/400/cats",
+			"https://loremflickr.com/400/400/cats",
+			"https://loremflickr.com/400/400/food",
+			"https://loremflickr.com/400/400/cats",
+			"https://loremflickr.com/400/400/food"
+		],
+		"createdAt": "2025-09-01T00:00:00.000Z",
+		"updatedAt": "2025-09-01T00:00:00.000Z"
+	},
+	{
+		"name": "Handcrafted Stoneware Dinnerware Set",
+		"slug": "handcrafted-stoneware-dinnerware-set",
+		"description": "A handcrafted stoneware dinnerware set with rustic glaze, perfect for serving meals with style",
+		"excerpt": "Rustic dinnerware set",
+		"price": 120000,
+		"tags": ["kitchen", "dinnerware set", "stoneware", "handcrafted"],
+		"thumbnail": "https://loremflickr.com/400/400/abstract",
+		"images": [
+			"https://loremflickr.com/400/400/cats",
+			"https://loremflickr.com/400/400/cats",
+			"https://loremflickr.com/400/400/food",
+			"https://loremflickr.com/400/400/cats",
+			"https://loremflickr.com/400/400/food"
+		],
+		"createdAt": "2025-10-10T00:00:00.000Z",
+		"updatedAt": "2025-10-10T00:00:00.000Z"
+	},
+	{
+		"name": "Boho Chic Hanging Planters",
+		"slug": "boho-chic-hanging-planters",
+		"description": "A set of boho chic hanging planters with macrame accents, adds greenery and style to your home",
+		"excerpt": "Stylish hanging planters",
+		"price": 40000,
+		"tags": ["decor", "hanging planters", "boho chic", "macrame"],
+		"thumbnail": "https://loremflickr.com/400/400/abstract",
+		"images": [
+			"https://loremflickr.com/400/400/cats",
+			"https://loremflickr.com/400/400/cats",
+			"https://loremflickr.com/400/400/food",
+			"https://loremflickr.com/400/400/cats",
+			"https://loremflickr.com/400/400/food"
+		],
+		"createdAt": "2025-11-05T00:00:00.000Z",
+		"updatedAt": "2025-11-05T00:00:00.000Z"
+	},
+	{
+		"name": "Minimalist Desk Organizer Set",
+		"slug": "minimalist-desk-organizer-set",
+		"description": "A minimalist desk organizer set with clean lines, keeps your workspace tidy and stylish",
+		"excerpt": "Modern desk organizer set",
+		"price": 35000,
+		"tags": ["office", "desk organizer", "minimalist"],
+		"thumbnail": "https://loremflickr.com/400/400/abstract",
+		"images": [
+			"https://loremflickr.com/400/400/cats",
+			"https://loremflickr.com/400/400/cats",
+			"https://loremflickr.com/400/400/food",
+			"https://loremflickr.com/400/400/cats",
+			"https://loremflickr.com/400/400/food"
+		],
+		"createdAt": "2025-12-01T00:00:00.000Z",
+		"updatedAt": "2025-12-01T00:00:00.000Z"
+	},
+	{
+		"name": "Classic Leather Journal",
+		"slug": "classic-leather-journal",
+		"description": "A classic leather journal with refillable pages, perfect for writing down your thoughts and ideas",
+		"excerpt": "Refillable leather journal",
+		"price": 25000,
+		"tags": ["office", "journal", "leather", "classic"],
+		"thumbnail": "https://loremflickr.com/400/400/abstract",
+		"images": [
+			"https://loremflickr.com/400/400/cats",
+			"https://loremflickr.com/400/400/cats",
+			"https://loremflickr.com/400/400/food",
+			"https://loremflickr.com/400/400/cats",
+			"https://loremflickr.com/400/400/food"
+		],
+		"createdAt": "2026-01-15T00:00:00.000Z",
+		"updatedAt": "2026-01-15T00:00:00.000Z"
+	},
+	{
+		"name": "Modern Ceramic Tableware Set",
+		"slug": "modern-ceramic-tableware-set",
+		"description": "A modern ceramic tableware set with sleek design, perfect for serving meals in style",
+		"excerpt": "Sleek ceramic tableware set",
+		"price": 90000,
+		"tags": ["kitchen", "tableware set", "ceramic", "modern"],
+		"thumbnail": "https://loremflickr.com/400/400/abstract",
+		"images": [
+			"https://loremflickr.com/400/400/cats",
+			"https://loremflickr.com/400/400/cats",
+			"https://loremflickr.com/400/400/food",
+			"https://loremflickr.com/400/400/cats",
+			"https://loremflickr.com/400/400/food"
+		],
+		"createdAt": "2026-02-10T00:00:00.000Z",
+		"updatedAt": "2026-02-10T00:00:00.000Z"
+	}
+]
