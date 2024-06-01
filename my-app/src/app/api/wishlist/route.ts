@@ -36,6 +36,8 @@ export const POST = async (req: NextRequest) => {
 			userId: new ObjectId(userId), 
 			productId: new ObjectId(body.productId) 
 		});
+		console.log(newWishlist, "<<<<<<<< newWishlist");
+		
 
 		return NextResponse.json({message: "Wishlist created", data: newWishlist});
 	} catch (error) {
@@ -43,3 +45,22 @@ export const POST = async (req: NextRequest) => {
 		throw new Error(String(error));
 	}
 };
+
+export const DELETE = async (req: NextRequest) => {
+	const { productId } = await req.json();
+
+	try {
+		const removedWishlist =  await WishlistModel.deleteWishlist(
+			{id:productId},
+		);
+
+		if (!removedWishlist) {
+			return NextResponse.json({ message: "Wishlist not found" }, { status: 404 });
+		}
+
+		return NextResponse.json({ message: "Wishlist deleted" });
+	} catch (error) {
+		console.log(error);
+		throw new Error(String(error));
+	}
+}

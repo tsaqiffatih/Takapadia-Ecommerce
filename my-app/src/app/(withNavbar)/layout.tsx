@@ -17,8 +17,8 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body className={inter.className}>
-				<main className="p-1 mx-auto bg-white h-screen w-screen overflow-y-auto overflow-x-hidden bg-opacity-80">
-					<div>
+				<main className=" bg-white overflow-y-auto bg-opacity-80">
+					<div >
 						<Navbar />
 					</div>
 					<div className=" mt-16" >{children}</div>

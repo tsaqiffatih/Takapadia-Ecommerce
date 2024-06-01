@@ -20,7 +20,7 @@ export interface WishlistData {
 	userId: ObjectId;
 	updatedAt?: string;
 	createdAt?: string;
-	product?: ProductData;
+	Product?: ProductData;
 }
 
 export interface payload {

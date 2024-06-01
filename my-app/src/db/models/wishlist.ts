@@ -93,6 +93,7 @@ export default class WishlistModel {
 			return wishlist;
 		} catch (error) {
 			console.log(error);
+			throw new Error(String(error));
 		}
 	}
 
@@ -107,20 +108,26 @@ export default class WishlistModel {
 			return wishlistById;
 		} catch (error) {
 			console.log(error);
+			throw new Error(String(error));
 		}
 	}
 
-	static async deleteWishlist(id: string) {
+	static async deleteWishlist({id}:{id: string | ObjectId}) {
 		try {
+			const wishListId = typeof id === "string" ? new ObjectId(id) : id;
+
 			const { deletedCount } = await WishlistModel.collection().deleteOne({
-				_id: new ObjectId(id),
+				_id: wishListId,
 			});
 
 			if (deletedCount === 0) {
-				throw new Error("Wishlist not found");
+				return null;
 			}
+
+			return deletedCount;
 		} catch (error) {
 			console.log(error);
+			throw new Error(String(error));
 		}
 	}
 }
