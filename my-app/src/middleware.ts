@@ -10,7 +10,7 @@ export async function middleware(request: NextRequest) {
 		if (!authorization) {
 			return NextResponse.json(
 				{
-					message: "You have to login for access this feature",
+					message: "You have to login for adding the product to wishlist",
 				},
 				{ status: 401 }
 			);
@@ -19,7 +19,7 @@ export async function middleware(request: NextRequest) {
 		if (!token[1]) {
 			return NextResponse.json(
 				{
-					message: "Login First to access this feature",
+					message: "You have to login for adding the product to wishlist",
 				},
 				{ status: 401 }
 			);

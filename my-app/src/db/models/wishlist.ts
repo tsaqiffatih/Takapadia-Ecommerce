@@ -22,10 +22,10 @@ export default class WishlistModel {
 				userId,
 				productId,
 			});
+
 			if (existingWishlist) {
 				throw new Error("Wishlist already exists");
 			}
-			// const { userId, productId } = newWishlist;
 
 			const { insertedId } = await WishlistModel.collection().insertOne({
 				userId,
@@ -37,6 +37,31 @@ export default class WishlistModel {
 			return await WishlistModel.getWishlistById(insertedId);
 		} catch (error) {
 			console.log(error);
+			throw new Error(String(error));
+		}
+	}
+
+	static async getOneWishlist({
+		userId,
+		productId,
+	}: {
+		userId: ObjectId;
+		productId: ObjectId;
+	}) {
+		try {
+			const existingWishlist = await WishlistModel.collection().findOne({
+				userId,
+				productId,
+			});
+
+			if (existingWishlist) {
+				return await WishlistModel.getWishlistById(existingWishlist._id);
+			}
+
+			return null
+		} catch (error) {
+			console.log(error);
+			throw new Error(String(error));
 		}
 	}
 

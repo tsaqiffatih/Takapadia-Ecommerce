@@ -23,6 +23,15 @@ export const POST = async (req: NextRequest) => {
 			productId: body.productId,
 		  });
 
+		const existingWishlist = await WishlistModel.getOneWishlist({
+			userId: new ObjectId(userId),
+			productId: new ObjectId(body.productId),
+		});
+
+		if (existingWishlist) {
+			return NextResponse.json({ message: "Product Already in your wishlist" }, { status: 400 });
+		}
+
 		const newWishlist = await WishlistModel.createWishlist({ 
 			userId: new ObjectId(userId), 
 			productId: new ObjectId(body.productId) 
@@ -30,6 +39,7 @@ export const POST = async (req: NextRequest) => {
 
 		return NextResponse.json({message: "Wishlist created", data: newWishlist});
 	} catch (error) {
-		
+		console.log(error);
+		throw new Error(String(error));
 	}
 };
