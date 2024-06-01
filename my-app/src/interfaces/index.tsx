@@ -15,12 +15,12 @@ export interface ProductData {
 }
 
 export interface WishlistData {
-	_id: ObjectId;
+	_id?: ObjectId | string;
 	productId: ObjectId;
 	userId: ObjectId;
-	updatedAt: string;
-	createdAt: string;
-	product: ProductData;
+	updatedAt?: string;
+	createdAt?: string;
+	product?: ProductData;
 }
 
 export interface payload {

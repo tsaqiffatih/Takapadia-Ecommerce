@@ -10,23 +10,31 @@ export default class WishlistModel {
 		return database.collection<WishlistData>("wishlist");
 	}
 
-	static async createWishlist(newWishlist: WishlistData) {
+	static async createWishlist({
+		userId,
+		productId,
+	}: {
+		userId: ObjectId;
+		productId: ObjectId;
+	}) {
 		try {
-			const { userId, productId } = newWishlist;
-
 			const existingWishlist = await WishlistModel.collection().findOne({
-				userId: new ObjectId(userId),
-				productId: new ObjectId(productId),
+				userId,
+				productId,
 			});
 			if (existingWishlist) {
 				throw new Error("Wishlist already exists");
 			}
+			// const { userId, productId } = newWishlist;
 
-			const { insertedId } = await WishlistModel.collection().insertOne(
-				newWishlist
-			);
+			const { insertedId } = await WishlistModel.collection().insertOne({
+				userId,
+				productId,
+				createdAt: new Date().toISOString(),
+				updatedAt: new Date().toISOString(),
+			});
 
-			return await WishlistModel.getWishlistById(insertedId.toString());
+			return await WishlistModel.getWishlistById(insertedId);
 		} catch (error) {
 			console.log(error);
 		}
@@ -63,10 +71,12 @@ export default class WishlistModel {
 		}
 	}
 
-	static async getWishlistById(id: string) {
+	static async getWishlistById(id: string | ObjectId) {
 		try {
+			const wishListId = typeof id === "string" ? new ObjectId(id) : id;
+
 			const wishlistById = await WishlistModel.collection().findOne({
-				_id: new ObjectId(id),
+				_id: wishListId,
 			});
 
 			return wishlistById;

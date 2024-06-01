@@ -10,7 +10,7 @@ export async function middleware(request: NextRequest) {
 		if (!authorization) {
 			return NextResponse.json(
 				{
-					message: "Unauthorized",
+					message: "You have to login for access this feature",
 				},
 				{ status: 401 }
 			);
@@ -19,7 +19,7 @@ export async function middleware(request: NextRequest) {
 		if (!token[1]) {
 			return NextResponse.json(
 				{
-					message: "Unauthorized",
+					message: "Login First to access this feature",
 				},
 				{ status: 401 }
 			);
