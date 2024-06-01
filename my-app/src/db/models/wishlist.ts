@@ -65,7 +65,7 @@ export default class WishlistModel {
 		}
 	}
 
-	static async getAllWishlist(id: string) {
+	static async getWishlistByUserId(id: string) {
 		try {
 			const wishlist = await WishlistModel.collection()
 				.aggregate([
@@ -105,21 +105,6 @@ export default class WishlistModel {
 			});
 
 			return wishlistById;
-		} catch (error) {
-			console.log(error);
-		}
-	}
-
-	static async getWishlistByUserId(userId: string) {
-		// untuk memudah kan, nanti data yang dikembalikan gak cuman product id, tapi ada data productnya cukup dengan menggabungkan data wishlist dengan data product
-		try {
-			const wishlistByUserId = await WishlistModel.collection()
-				.find({
-					userId: new ObjectId(userId),
-				})
-				.toArray();
-
-			return wishlistByUserId;
 		} catch (error) {
 			console.log(error);
 		}

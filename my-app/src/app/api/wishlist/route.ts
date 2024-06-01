@@ -7,7 +7,7 @@ import { wishlistSchema } from "@/validators/wishlistValidator";
 
 export const GET = async (req: NextRequest) => {
 	const userId = headers().get("userId") ?? "";
-	const wishlist = await WishlistModel.getAllWishlist(userId);
+	const wishlist = await WishlistModel.getWishlistByUserId(userId);
 	return NextResponse.json(wishlist);
 };
 
