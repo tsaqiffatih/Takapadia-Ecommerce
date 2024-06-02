@@ -18,11 +18,6 @@ export const POST = async (req: NextRequest) => {
 	const body: WishlistData = await req.json();
 
 	try {
-		const data = wishlistSchema.parse({
-			userId: userId,
-			productId: body.productId,
-		  });
-
 		const existingWishlist = await WishlistModel.getOneWishlist({
 			userId: new ObjectId(userId),
 			productId: new ObjectId(body.productId),
@@ -47,18 +42,20 @@ export const POST = async (req: NextRequest) => {
 };
 
 export const DELETE = async (req: NextRequest) => {
-	const { productId } = await req.json();
+	const { wishlistId } = await req.json();
 
 	try {
+		console.log(wishlistId);
+		
 		const removedWishlist =  await WishlistModel.deleteWishlist(
-			{id:productId},
+			{id:wishlistId},
 		);
 
 		if (!removedWishlist) {
 			return NextResponse.json({ message: "Wishlist not found" }, { status: 404 });
 		}
 
-		return NextResponse.json({ message: "Wishlist deleted" });
+		return NextResponse.json({ message: `Success deleted wishlist`,removedWishlist});
 	} catch (error) {
 		console.log(error);
 		throw new Error(String(error));

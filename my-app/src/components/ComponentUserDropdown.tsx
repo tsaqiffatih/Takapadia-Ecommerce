@@ -20,23 +20,23 @@ export default function UserDropdown({
 
 	return (
 		<>
-			<div className="dropdown dropdown-end shadow-2xl">
-				<div
-					tabIndex={0}
-					role="button"
-					className="btn btn-ghost btn-circle avatar"
-				>
-					<div className="avatar placeholder">
-						<div className="bg-neutral text-neutral-content rounded-full w-10">
-							<span className="text-base">UI</span>
+			{isLogedIn ? (
+				<div className="dropdown dropdown-end shadow-2xl">
+					<div
+						tabIndex={0}
+						role="button"
+						className="btn btn-ghost btn-circle avatar"
+					>
+						<div className="avatar placeholder">
+							<div className="bg-neutral text-neutral-content rounded-full w-10">
+								<span className="text-base">UI</span>
+							</div>
 						</div>
 					</div>
-				</div>
-				<ul
-					tabIndex={0}
-					className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow border border-black bg-base-100 rounded-md w-52"
-				>
-					{isLogedIn ? (
+					<ul
+						tabIndex={0}
+						className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow border border-black bg-base-100 rounded-md w-52"
+					>
 						<>
 							<li>
 								<a className="justify-between font-bold">Profile</a>
@@ -55,15 +55,13 @@ export default function UserDropdown({
 								</button>
 							</li>
 						</>
-					) : (
-						<li>
-							<Link href={"/login"} className="font-bold">
-								Login
-							</Link>
-						</li>
-					)}
-				</ul>
-			</div>
+					</ul>
+				</div>
+			) : (
+				<button className="btn border border-black bg-transparent">
+					<Link href={"/login"}>Login</Link>
+				</button>
+			)}
 		</>
 	);
 }

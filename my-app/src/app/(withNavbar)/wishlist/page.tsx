@@ -7,7 +7,7 @@ import Card from "@/components/Card";
 import { WishlistData } from "@/interfaces";
 import Link from "next/link";
 import Image from "next/image";
-import DeleteWislist from "@/components/DeleteWishlist";
+import DeleteWishlist from "@/components/DeleteWishlist";
 
 export default function Wishlist() {
 	const [dataWishlist, setDataWishlist] = useState<WishlistData[] | undefined>(
@@ -16,7 +16,6 @@ export default function Wishlist() {
 	const [loading, setLoading] = useState(true);
 
 	const formatCurrency = (price: number | undefined) => {
-		// if price is undefined, return empty string. See validators/productValidator.ts
 		if (price === undefined) {
 			return "";
 		}
@@ -53,7 +52,7 @@ export default function Wishlist() {
 			Swal.fire({
 				icon: "error",
 				title: "Oops...",
-				text: "Something went wrong!, pelase try again later.",
+				text: "Something went wrong!, please try again later.",
 			});
 		} finally {
 			setLoading(false);
@@ -65,12 +64,10 @@ export default function Wishlist() {
 	}, []);
 
 	if (!dataWishlist) {
-		// if user dosent have any wishlist
 		return (
 			<div className="flex items-center justify-center h-screen">
 				<div className="text-center">
 					<p className="text-2xl font-bold mb-4">Wishlist Kamu Masih Kosong</p>
-					{/* Tambahkan link kembali ke halaman utama atau halaman produk */}
 					<Link href="/products">
 						<p className="text-blue-500 underline">
 							Kembali ke Halaman Products
@@ -80,60 +77,68 @@ export default function Wishlist() {
 			</div>
 		);
 	}
-	
-	console.log(dataWishlist, "<<<<<<<< dataWishlist");
-	
 
 	return (
-		<div className=" mt-20">
-			<div className="w-screen mx-auto">{loading && <Loading />}</div>
-			{/*product name, product thumbnail, description, price  */}
-			<div className=" m-2 items-center justify-center max-w-screen ">
-				<table className="table border border-black">
-					{/* head */}
-					<thead>
-						<tr className="text-black font-bold">
-							<th className="border border-black w-3">No</th>
-							<th className="border border-black">Product Name</th>
-							<th className="border border-black">Description</th>
-							<th className="border border-black">Price</th>
-							<th></th>
-						</tr>
-					</thead>
-					<tbody>
-						{dataWishlist.map((wishlist,index) => (
-							<tr key={wishlist.Product?.slug}>
-								<td className="border border-black text-black font-semibold text-center">
-									{index+1}
-								</td>
-								<td className="border border-black">
-									<div className="flex items-center gap-3">
-										<div className="avatar">
-											<div className="mask mask-squircle w-12 h-12">
-												<Image
-													src={wishlist.Product?.thumbnail ?? ""}
-													alt={wishlist.Product?.name ?? ""}
-													fill
-												/>
+		<div className="mt-20">
+			<p className=" text-center text-2xl font-bold mb-4">My Wishlist</p>
+			{loading ? (
+				<div className="w-screen mx-auto">
+					<Loading />
+				</div>
+			) : (
+				<div className="m-2 items-center justify-center max-w-screen">
+					<table className="table border border-black">
+						<thead>
+							<tr className="text-black font-bold">
+								<th className="border border-black w-3">No</th>
+								<th className="border border-black">Product Name</th>
+								<th className="border border-black">Description</th>
+								<th className="border border-black">Price</th>
+								<th></th>
+							</tr>
+						</thead>
+						<tbody>
+							{dataWishlist.map((wishlist, index) => (
+								<tr key={wishlist.Product?.slug}>
+									<td className="border border-black text-black font-semibold text-center">
+										{index + 1}
+									</td>
+									<td className="border border-black">
+										<div className="flex items-center gap-3">
+											<div className="avatar">
+												<div className="mask mask-squircle w-12 h-12">
+													<Image
+														src={wishlist.Product?.thumbnail ?? ""}
+														alt={wishlist.Product?.name ?? ""}
+														fill
+													/>
+												</div>
+											</div>
+											<div>
+												<div className="font-bold">
+													{wishlist.Product?.name}
+												</div>
 											</div>
 										</div>
-										<div>
-											<div className="font-bold">{wishlist.Product?.name}</div>
-										</div>
-									</div>
-								</td>
-								<td className="border border-black font-semibold">
-									{wishlist.Product?.description}
-								</td>
-								<td className="border border-black font-semibold">{formatCurrency(wishlist.Product?.price)}</td>
-								<td className="border border-black text-center">
-									<DeleteWislist wishlistId={wishlist._id ?? ''} />
-								</td>
-							</tr>
-						))}
-					</tbody>
-				</table>
-			</div>
+									</td>
+									<td className="border border-black font-semibold">
+										{wishlist.Product?.description}
+									</td>
+									<td className="border border-black font-semibold">
+										{formatCurrency(wishlist.Product?.price)}
+									</td>
+									<td className="border border-black text-center">
+										<DeleteWishlist
+											wishlistId={wishlist._id ?? ""}
+											refreshWishlist={fetchWishlist}
+										/>
+									</td>
+								</tr>
+							))}
+						</tbody>
+					</table>
+				</div>
+			)}
 		</div>
 	);
 }
