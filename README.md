@@ -20,7 +20,8 @@ This is an E-commerce application built with Next.js and TypeScript. It provides
 - Product Details
 - Shopping Cart (On Going)
 - User Profile Management (On Going)
-- Wishlist (On Going)
+- Wishlist
+- Delete Wishlist
 
 ## Tech Stack
 
