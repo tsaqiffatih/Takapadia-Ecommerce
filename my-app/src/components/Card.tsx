@@ -2,7 +2,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import AddToWishlist from "./ButtonWishList";
-import { typeProduct } from "@/validators/productValidator";
 import { ProductData } from "@/interfaces";
 
 export default function Card({ product }: { product: ProductData }) {
