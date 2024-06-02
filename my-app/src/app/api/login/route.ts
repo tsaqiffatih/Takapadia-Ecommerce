@@ -9,6 +9,7 @@ export const POST = async (request: NextRequest) => {
 	try {
 		const body = await request.json();
 		const data = loginSchema.parse(body);
+		console.log(data.email);
 		
 		const user = await UserModel.getUserByEmail(data.email);
 
