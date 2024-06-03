@@ -2,6 +2,7 @@ import { cookies } from "next/headers";
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 import { jwtVerify } from "jose";
+import Swal from "sweetalert2";
 
 // This function can be marked `async` if using `await` inside
 export async function middleware(request: NextRequest) {
@@ -56,6 +57,7 @@ export async function middleware(request: NextRequest) {
 		}
 	}
 
+	// hanldes the wishlist page in server, if the user not loged in, redirect to login page and if handler in navbar doesnt run correctly 
 	if (request.nextUrl.pathname.startsWith("/wishlist")) {
 		const auth = cookies().get("Authorization");
 		if (!auth) {
