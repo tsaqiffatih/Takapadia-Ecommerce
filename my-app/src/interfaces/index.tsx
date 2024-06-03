@@ -44,3 +44,12 @@ export interface Tuser {
 	name: string;
 	email: string;
 }
+
+export interface CartData {
+	_id: ObjectId | string
+    userId: ObjectId | string
+    productId: ObjectId | string
+    quantity: number;
+    createdAt: string;
+    updatedAt: string;
+};
