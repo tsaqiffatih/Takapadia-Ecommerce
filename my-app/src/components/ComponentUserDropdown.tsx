@@ -42,7 +42,7 @@ export default function UserDropdown({
 								<a className="justify-between font-bold">Profile</a>
 							</li>
 							<li>
-								<a className="font-bold">My Wishlist</a>
+								<Link href="/wishlist" className="font-bold">My Wishlist</Link>
 							</li>
 							<li>
 								<button

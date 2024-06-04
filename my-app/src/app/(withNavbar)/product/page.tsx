@@ -2,7 +2,6 @@
 import { useEffect, useState } from "react";
 import Card from "@/components/Card";
 import InfiniteScroll from "react-infinite-scroll-component";
-// import { ProductData } from "@/validators/productValidator";
 import Search from "@/components/search";
 import { ProductData } from "@/interfaces";
 
