@@ -5,7 +5,7 @@ export default function About() {
         <div className="hero-content">
           <div className="">
             <h1 className="text-5xl font-bold">Taka-Pedia</h1>
-            <p className="text-lg">
+            <p className="text-lg font-semibold">
               is an e-commerce platform that provides a comprehensive
               marketplace for users to buy and sell a wide range of products and
               services. With its user-friendly interface and robust features,
