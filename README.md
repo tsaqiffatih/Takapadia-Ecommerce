@@ -16,12 +16,12 @@ This is an E-commerce application built with Next.js and TypeScript. It provides
 
 - User Authentication (Login/Register)
 - Browse Products
-- Product Search (On Going)
+- Product Search
 - Product Details
-- Shopping Cart (On Going)
-- User Profile Management (On Going)
 - Wishlist
-- Delete Wishlist
+- Infinite Scroll
+- Delete User Wishlist
+- Create/Add User Wishlist
 
 ## Tech Stack
 
@@ -29,9 +29,10 @@ This is an E-commerce application built with Next.js and TypeScript. It provides
 - [React](https://reactjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
-- [MongoDB](https://www.mongodb.com/) (or any database of your choice)
+- [React infinite scroll Component](https://www.npmjs.com/package/react-infinite-scroll-component)
+- [MongoDB](https://www.mongodb.com/)
 - [JWT](https://jwt.io/) for Authentication
-- [Zod](https://github.com/colinhacks/zod) for Validation
+- [Zod](https://github.com/colinhacks/zod)
 
 ## Installation
 
