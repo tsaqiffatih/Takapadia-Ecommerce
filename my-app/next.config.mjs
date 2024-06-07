@@ -1,8 +1,29 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    images: {
-        domains: ["cdn.dribbble.com", "images.tokopedia.net","loremflickr.com", "img.daisyui.com"],
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'cdn.dribbble.com',
+        pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'images.tokopedia.net',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'loremflickr.com',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'img.daisyui.com',
+        pathname: '/**',
+      },
+    ],
+  },
 };
 
 export default nextConfig;
