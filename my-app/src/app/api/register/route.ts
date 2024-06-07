@@ -1,7 +1,7 @@
 import UserModel from "@/db/models/user";
-import { typeUser, userSchema } from "../../validators/userValidator";
 import { z } from "zod";
 import { NextRequest, NextResponse } from "next/server";
+import { userSchema } from "@/validators/userValidator";
 
 export const POST = async (request: NextRequest) => {
 	try {
