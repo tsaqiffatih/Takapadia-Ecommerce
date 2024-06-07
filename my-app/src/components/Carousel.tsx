@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Carousel() {
     // Data gambar dan tombol navigasi
     const slides = [
@@ -32,7 +34,7 @@ export default function Carousel() {
             <div className="carousel justify-content-center w-full h-72">
                 {slides.map((slide, index) => (
                     <div key={index} id={slide.id} className="carousel-item relative w-full">
-                            <img src={slide.imageUrl} className="w-full" />
+                            <Image src={slide.imageUrl} alt={slide.id} className="w-full" />
                         <div className="absolute flex justify-between transform -translate-y-1/2 left-2 right-2 top-1/2 ">
                             <a href={slide.prevSlide} className="btn hover:btn-circle text-black bg-white rounded-white">
                                 ❮

@@ -56,3 +56,17 @@ async function checkDatabaseConnection() {
 checkDatabaseConnection().catch(console.error);
 
 */
+// async function testConnection() {
+//   const client = new MongoClient(uri as string);
+
+//   try {
+//     await client.connect();
+//     console.log('Connected to MongoDB');
+//   } catch (error) {
+//     console.error('Error connecting to MongoDB:', error);
+//   } finally {
+//     await client.close();
+//   }
+// }
+
+// testConnection();
