@@ -3,6 +3,7 @@
 import { setCookies } from "@/actions/setCookies";
 import ToHome from "@/components/BackToHome";
 import ErrorNotif from "@/components/ErrorNotif";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import Swal from "sweetalert2";
@@ -149,12 +150,12 @@ export default function LoginPage() {
 
 								<div className="text-center flex-none text-gray-700">
 									<p>Doesn&apos;t have an account?</p>
-									<a
-										href=""
+									<Link
+										href="/register"
 										className="underline hover:text-red-700 font-semibold"
 									>
 										Register here!
-									</a>
+									</Link>
 								</div>
 							</div>
 						</form>

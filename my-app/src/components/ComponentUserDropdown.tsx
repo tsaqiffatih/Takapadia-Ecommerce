@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { handleLogout } from "@/actions/Logout";
 import { useEffect, useState } from "react";
+import Swal from "sweetalert2";
 
 export default function UserDropdown({
 	isLogedIn,
@@ -21,44 +22,28 @@ export default function UserDropdown({
 	return (
 		<>
 			{isLogedIn ? (
-				<div className="dropdown dropdown-end shadow-2xl">
-					<div
-						tabIndex={0}
-						role="button"
-						className="btn btn-ghost btn-circle avatar"
-					>
-						<div className="avatar placeholder">
-							<div className="bg-neutral text-neutral-content rounded-full w-10">
-								<span className="text-base">UI</span>
-							</div>
-						</div>
-					</div>
-					<ul
-						tabIndex={0}
-						className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow border border-black bg-base-100 rounded-md w-52"
-					>
-						<>
-							<li>
-								<a className="justify-between font-bold">Profile</a>
-							</li>
-							<li>
-								<Link href="/wishlist" className="font-bold">My Wishlist</Link>
-							</li>
-							<li>
-								<button
-									onClick={() => {
-										handleLogout();
-									}}
-									className="btn-ghost font-bold"
-								>
-									Logout
-								</button>
-							</li>
-						</>
-					</ul>
-				</div>
+				<button
+					onClick={async () => {
+						const result = await Swal.fire({
+							icon: "question",
+							title: "Anda Yakin Mau Keluar?",
+							showCancelButton: true,
+							confirmButtonText: "Ya",
+							cancelButtonText: "Tidak",
+						});
+
+						if (result.isConfirmed) {
+							handleLogout();
+						} else {
+							console.log("gak jadi");
+						}
+					}}
+					className="btn btn-ghost border hover:bg-black hover:text-white border-black bg-transparent"
+				>
+					Logout
+				</button>
 			) : (
-				<button className="btn border border-black bg-transparent">
+				<button className="btn btn-ghost border hover:bg-black hover:text-white border-black bg-transparent">
 					<Link href={"/login"}>Login</Link>
 				</button>
 			)}

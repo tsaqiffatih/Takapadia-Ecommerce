@@ -6,9 +6,15 @@ import { WishlistData } from "@/interfaces";
 import { wishlistSchema } from "@/validators/wishlistValidator";
 
 export const GET = async (req: NextRequest) => {
-	const userId = headers().get("userId") ?? "";
-	const wishlist = await WishlistModel.getWishlistByUserId(userId);
-	return NextResponse.json(wishlist);
+	try {
+		const userId = headers().get("userId") ?? "";
+		const wishlist = await WishlistModel.getWishlistByUserId(userId);
+		return NextResponse.json(wishlist);
+	} catch (error) {
+		console.log(error);
+		
+		throw new Error(String(error));
+	}
 };
 
 export const POST = async (req: NextRequest) => {
@@ -24,17 +30,21 @@ export const POST = async (req: NextRequest) => {
 		});
 
 		if (existingWishlist) {
-			return NextResponse.json({ message: "Product Already in your wishlist" }, { status: 400 });
+			return NextResponse.json(
+				{ message: "Product Already in your wishlist" },
+				{ status: 400 }
+			);
 		}
 
-		const newWishlist = await WishlistModel.createWishlist({ 
-			userId: new ObjectId(userId), 
-			productId: new ObjectId(body.productId) 
+		const newWishlist = await WishlistModel.createWishlist({
+			userId: new ObjectId(userId),
+			productId: new ObjectId(body.productId),
 		});
-		console.log(newWishlist, "<<<<<<<< newWishlist");
-		
 
-		return NextResponse.json({message: "Wishlist created", data: newWishlist});
+		return NextResponse.json({
+			message: "Wishlist created",
+			data: newWishlist,
+		});
 	} catch (error) {
 		console.log(error);
 		throw new Error(String(error));
@@ -46,18 +56,24 @@ export const DELETE = async (req: NextRequest) => {
 
 	try {
 		console.log(wishlistId);
-		
-		const removedWishlist =  await WishlistModel.deleteWishlist(
-			{id:wishlistId},
-		);
+
+		const removedWishlist = await WishlistModel.deleteWishlist({
+			id: wishlistId,
+		});
 
 		if (!removedWishlist) {
-			return NextResponse.json({ message: "Wishlist not found" }, { status: 404 });
+			return NextResponse.json(
+				{ message: "Wishlist not found" },
+				{ status: 404 }
+			);
 		}
 
-		return NextResponse.json({ message: `Success deleted wishlist`,removedWishlist});
+		return NextResponse.json({
+			message: `Success deleted wishlist`,
+			removedWishlist,
+		});
 	} catch (error) {
 		console.log(error);
 		throw new Error(String(error));
 	}
-}
+};
