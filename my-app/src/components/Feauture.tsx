@@ -1,10 +1,19 @@
 "use client";
 import { ProductData } from "@/interfaces";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
 export default function Feature() {
 	const [products, setProducts] = useState<ProductData[]>([]);
+
+	const truncateSentence = (sentence: string, maxLength = 48) => {
+		if (sentence.length <= maxLength) {
+			return sentence;
+		}
+
+		return sentence.slice(0, maxLength) + "...";
+	};
 
 	useEffect(() => {
 		const fetchData = async () => {
@@ -18,6 +27,7 @@ export default function Feature() {
 		};
 		fetchData();
 	}, []);
+	console.log(products);
 
 	return (
 		<>
@@ -33,24 +43,38 @@ export default function Feature() {
 								>
 									<figure>
 										<Image
-											src={`https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg`}
-											alt={`Product`}
+											src={
+												product.thumbnail
+													? product.thumbnail
+													: "https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg"
+											}
+											alt={product.name}
 											fill
 											className=" rounded-xl"
 										/>
 									</figure>
 									<div className="card-body">
-										<h2 className="card-title">Product</h2>
-										<p>If a dog chews shoes whose shoes does he choose?</p>
+										<h2 className="card-title">{product.name}</h2>
+										<p>
+											{truncateSentence(
+												product.description ? product.description : ""
+											)}
+										</p>
 										<div className="card-actions justify-end">
 											<button className="btn btn-primary btn-ghost hover:border-black">
-												See Detail
+												<Link href={`/product/${product.slug}`}>
+													See Detail
+												</Link>
 											</button>
 										</div>
 									</div>
 								</div>
 							))}
-							<p>haii</p>
+							<div className="flex flex-grow text-center items-center justify-center">
+								<button className=" text-lg rounded-lg font-bold border hover:bg-black p-1 border-black hover:text-white  ">
+									See All Product
+								</button>
+							</div>
 						</div>
 					</div>
 				) : (

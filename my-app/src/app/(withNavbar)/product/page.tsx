@@ -110,6 +110,9 @@ export default function ProductPage() {
 						<Card key={product.slug} product={product} />
 					))}
 				</div>
+					<p className=" text-center my-5 text-black">
+						<b>Yay! Kamu telah melihat semua produk!</b>
+					</p>
 			</InfiniteScroll>
 		</>
 	);

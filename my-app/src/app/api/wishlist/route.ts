@@ -5,6 +5,7 @@ import { ObjectId } from "mongodb";
 import { WishlistData } from "@/interfaces";
 import { wishlistSchema } from "@/validators/wishlistValidator";
 
+// geting user wishlist by userId
 export const GET = async (req: NextRequest) => {
 	try {
 		const userId = headers().get("userId") ?? "";
@@ -17,6 +18,7 @@ export const GET = async (req: NextRequest) => {
 	}
 };
 
+// create wishlist user
 export const POST = async (req: NextRequest) => {
 	const headersList = headers();
 	const userId = headersList.get("userId") as string;
@@ -51,11 +53,11 @@ export const POST = async (req: NextRequest) => {
 	}
 };
 
+// delete wishlist user by id
 export const DELETE = async (req: NextRequest) => {
 	const { wishlistId } = await req.json();
 
 	try {
-		console.log(wishlistId);
 
 		const removedWishlist = await WishlistModel.deleteWishlist({
 			id: wishlistId,
