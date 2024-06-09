@@ -27,8 +27,8 @@ export default function UserDropdown({
 						className="btn btn-ghost btn-circle avatar"
 					>
 						<div className="avatar placeholder">
-							<div className="bg-neutral text-neutral-content rounded-full w-10">
-								<span className="text-base">UI</span>
+							<div className="bg-white border border-black text-neutral-content rounded-full w-10">
+								<span className="text-black">US</span>
 							</div>
 						</div>
 					</div>
@@ -37,9 +37,9 @@ export default function UserDropdown({
 						className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow border border-black bg-base-100 rounded-md w-52"
 					>
 						<>
-							<li>
+							{/* <li>
 								<a className="justify-between font-bold">Profile</a>
-							</li>
+							</li> */}
 							<li>
 								<Link href="/wishlist" className="font-bold">
 									My Wishlist
@@ -50,16 +50,16 @@ export default function UserDropdown({
 									onClick={async () => {
 										const result = await Swal.fire({
 											icon: "question",
-											title: "Anda Yakin Mau Keluar?",
+											title: "Are you sure want to Logout?",
 											showCancelButton: true,
-											confirmButtonText: "Ya",
-											cancelButtonText: "Tidak",
+											confirmButtonText: "Yes",
+											cancelButtonText: "No",
 										});
 
 										if (result.isConfirmed) {
 											handleLogout();
 										} else {
-											console.log("gak jadi");
+											console.log("Logout cancelled");
 										}
 									}}
 									className="btn-ghost font-bold"

@@ -1,19 +1,13 @@
 "use client";
+import { truncateSentence } from "@/actions/TruncateSentence";
 import { ProductData } from "@/interfaces";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
+
 export default function Feature() {
 	const [products, setProducts] = useState<ProductData[]>([]);
-
-	const truncateSentence = (sentence: string, maxLength = 48) => {
-		if (sentence.length <= maxLength) {
-			return sentence;
-		}
-
-		return sentence.slice(0, maxLength) + "...";
-	};
 
 	useEffect(() => {
 		const fetchData = async () => {
