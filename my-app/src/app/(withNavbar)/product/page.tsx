@@ -101,17 +101,17 @@ export default function ProductPage() {
 				loader={null}
 				endMessage={
 					<p className=" text-center mt-10 text-black">
-						<b>Yay! Kamu telah melihat semua produk!</b>
+						<b>Yay! You&apos;ve seen all the products!</b>
 					</p>
 				}
 			>
-				<div className="flex mt-36 space-x-2 flex-wrap justify-center">
+				<div className="grid grid-cols-2 gap-2 md:flex md:flex-wrap md:justify-center mt-20 md:mt-36 p-2 justify-center">
 					{filteredProducts.map((product) => (
 						<Card key={product.slug} product={product} />
 					))}
 				</div>
 					<p className=" text-center my-5 text-black">
-						<b>Yay! Kamu telah melihat semua produk!</b>
+						<b>Yay! You&apos;ve seen all the products!</b>
 					</p>
 			</InfiniteScroll>
 		</>

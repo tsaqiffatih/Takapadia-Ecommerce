@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import Swal from "sweetalert2";
+import UserDropdown from "./ComponentUserDropdown";
 
 export default function NavigationNavbar({
 	isLogedIn,
@@ -30,34 +31,44 @@ export default function NavigationNavbar({
 	};
 
 	const styleLink =
-		"text-black btn btn-ghost rounded rounded-lg hover:bg-transparent hover:border hover:border-black font-bold font-fomo";
+		"text-black btn btn-ghost rounded-lg hover:bg-transparent hover:border hover:border-black font-bold font-fomo";
 	const activeStyle = "bg-black text-white hover:text-black";
 
 	return (
-		<div className="navbar-center space-x-1">
-			<Link
-				href="/"
-				className={`${styleLink} ${pathname === "/" ? activeStyle : ""}`}
-			>
-				Home
-			</Link>
-			<span className="mx-2"></span>
-			<Link
-				href="/product"
-				className={`${styleLink} ${pathname === "/product" ? activeStyle : ""}`}
-			>
-				Products
-			</Link>
-			<span className="mx-2"></span>
-			<Link
-				href="/wishlist"
-				className={`${styleLink} ${
-					pathname === "/wishlist" ? activeStyle : ""
-				}`}
-				onClick={handleWishlistClick}
-			>
-				Wishlist
-			</Link>
-		</div>
+		<>
+			<li>
+				<Link
+					href="/"
+					className={`${styleLink} ${pathname === "/" ? activeStyle : ""}`}
+				>
+					Home
+				</Link>
+			</li>
+			<li>
+				<Link
+					href="/product"
+					className={`${styleLink} ${
+						pathname === "/product" ? activeStyle : ""
+					}`}
+				>
+					Products
+				</Link>
+			</li>
+			<li>
+				<Link
+					href="/wishlist"
+					className={`${styleLink} ${
+						pathname === "/wishlist" ? activeStyle : ""
+					}`}
+					onClick={handleWishlistClick}
+				>
+					Wishlist
+				</Link>
+			</li>
+			{/* 
+				<span className="mx-2"></span>
+				
+				<span className="mx-2"></span> */}
+		</>
 	);
 }

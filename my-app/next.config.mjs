@@ -22,6 +22,11 @@ const nextConfig = {
         hostname: 'img.daisyui.com',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'readymadeui.com',
+        pathname: '/**',
+      },
     ],
   },
 };

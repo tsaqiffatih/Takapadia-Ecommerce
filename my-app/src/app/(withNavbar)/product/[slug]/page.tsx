@@ -96,10 +96,10 @@ export default async function DetailProductPage({
 							<span className="title-font font-medium text-2xl text-gray-900">
 								{formatCurrency(data.price ?? 0)}
 							</span>
-							<button className="flex ml-auto text-black font-semibold border border-black py-2 px-6 hover:bg-red-600 rounded">
+							<button className="flex ml-2 text-black font-semibold border border-black py-2 px-6 hover:bg-red-600 rounded">
 								Buy
 							</button>
-							<span className="ml-4"></span>
+							<span className="ml-2"></span>
 							<AddToWishlist productId={data._id} />
 						</div>
 					</div>

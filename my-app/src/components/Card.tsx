@@ -18,7 +18,7 @@ export default function Card({ product }: { product: ProductData }) {
 	};
 
 	return (
-		<div className="card card-compact w-1/2 card-bordered border-black md:w-60 shadow-xl mb-2">
+		<div className="card card-compact w-full md:w-60 card-bordered border-black shadow-xl mb-2">
 			<figure>
 				<Image
 					src={product.thumbnail ?? ""}
@@ -31,20 +31,22 @@ export default function Card({ product }: { product: ProductData }) {
 			<div className="card-body">
 				<h2 className="card-title text-black">{product.name}</h2>
 				<p className="text-black truncate-20">{product.description}</p>
+				{/* <span className="border border-b-2 border-black my-1" ></span> */}
 				<div className="">
 					<p className="text-black">
 						<strong>{formatCurrency(product.price)}</strong>
 					</p>
 				</div>
-				<div className="card-actions mt-2 items-center justify-center flex space-x-7 ">
-					<div className="">
+				{/* <span className="border border-b-2 border-black my-1" ></span> */}
+				<div className="card-actions md:mt-2 items-center justify-center space-x-4 md:flex md:space-x-7 ">
+					{/* <button className="">
+					</button> */}
 						<Link
 							href={`product/${product.slug}`}
-							className=" text-black font-semibold hover:border hover:bg-transparent btn btn-ghost rounded hover:border-black p-3"
+							className=" text-black font-semibold hover:border hover:bg-transparent md:btn md:btn-ghost rounded hover:border-black md:p-2"
 						>
 							See details
 						</Link>
-					</div>
 					<AddToWishlist productId={product._id} />
 				</div>
 			</div>

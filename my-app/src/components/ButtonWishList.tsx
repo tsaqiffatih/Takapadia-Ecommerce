@@ -46,8 +46,8 @@ export default function AddToWishlist({ productId }: { productId: ObjectId }) {
 	};
 
 	return (
-		<div
-			className="btn btn-ghost hover:border hover:bg-transparent rounded hover:border-black"
+		<button
+			className="md:btn md:btn-ghost hover:border hover:bg-transparent ml-1 rounded hover:border-black"
 			onClick={() => {
 				handleAddToWishlist(productId);
 			}}
@@ -64,7 +64,7 @@ export default function AddToWishlist({ productId }: { productId: ObjectId }) {
 					strokeWidth="1"
 				></path>
 			</svg>
-		</div>
+		</button>
 	);
 }
 

@@ -1,17 +1,17 @@
-import Image from 'next/image';
+import Image from "next/image";
 import logo from "../../public/tokped_hitam_putih.png";
+import Link from "next/link";
 
 export default function LogoNavbar() {
-  return (
-    <>
-      <div className="navbar-start ml-2">
-        <Image
-          src={logo}
-          alt=""
-          className="w-auto h-auto max-h-12 max-w-full"
-        />
-        <a href="#" className="btn btn-ghost hover:bg-transparent ml-0 text-black text-xl ">Taka-pedia</a>
-      </div>
-    </>
-  );
+	return (
+		<>
+			<Link
+				href="/"
+				className=" min-w-40 items-center justify-center flex font-bold ml-1 text-black text-base lg:text-xl "
+			>
+				<Image src={logo} alt="Logo" className="h-10 w-10 mr-0" />
+				Taka-pedia
+			</Link>
+		</>
+	);
 }

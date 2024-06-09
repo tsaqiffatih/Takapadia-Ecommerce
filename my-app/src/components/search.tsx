@@ -17,10 +17,10 @@ export default function Search({
 
 	return (
 		<>
-			<div className="flex w-screen items-center md:w-full mt-0 justify-center p-5">
-				<div className="  p-5 w-2/4">
+			<div className="flex w-screen items-center md:w-full mt-0 justify-center p-9">
+				<div className="md:w-2/4 ">
 					<div className="flex border bg-white border-black rounded-lg">
-						<div className="flex w-10 items-center justify-center rounded-tl-lg rounded-bl-lg border-r border-black ">
+						<div className="flex w-10 items-center justify-center border-r border-black ">
 							<svg
 								viewBox="0 0 20 20"
 								aria-hidden="true"
@@ -31,13 +31,13 @@ export default function Search({
 						</div>
 						<input
 							type="text"
-							className="w-full bg-white pl-2 text-base font-semibold outline-0"
+							className="w-full bg-white pl-2 text-base border-y-black font-semibold"
 							placeholder="Search product here"
 							value={query}
 							onChange={(e) => setQuery(e.target.value)}
 							onKeyPress={handleKeyPress}
 						/>
-						<button onClick={() => onSearch(query)} className=" p-2 rounded-tr-lg border-l border-black rounded-br-lg text-black font-semibold hover:bg-blue-800 transition-colors">
+						<button onClick={() => onSearch(query)} className=" p-2 rounded-tr-lg border-l border-black rounded-br-lg text-black font-semibold hover:bg-black hover:text-white transition-colors">
 							Search
 						</button>
 					</div>

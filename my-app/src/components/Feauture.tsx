@@ -39,7 +39,7 @@ export default function Feature() {
 							{products.map((product, index) => (
 								<div
 									key={index}
-									className="card min-w-80 shadow-xl image-full "
+									className="card min-w-80 image-full "
 								>
 									<figure>
 										<Image
@@ -72,7 +72,9 @@ export default function Feature() {
 							))}
 							<div className="flex flex-grow text-center items-center justify-center">
 								<button className=" text-lg rounded-lg font-bold border hover:bg-black p-1 border-black hover:text-white  ">
+									<Link href="/product" >
 									See All Product
+									</Link>
 								</button>
 							</div>
 						</div>

@@ -6,10 +6,8 @@ import Swal from "sweetalert2";
 
 export default function UserDropdown({
 	isLogedIn,
-	accessToken,
 }: {
 	isLogedIn: boolean;
-	accessToken: string | undefined;
 }) {
 	// feature on going v
 	const [name, setName] = useState<string>("");
@@ -74,7 +72,7 @@ export default function UserDropdown({
 				</div>
 			) : (
 				<button className="btn btn-ghost border hover:bg-black hover:text-white border-black bg-transparent">
-					<Link href={"/login"}>Login</Link>
+					<Link href="/login">Login</Link>
 				</button>
 			)}
 		</>
