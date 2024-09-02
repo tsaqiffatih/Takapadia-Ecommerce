@@ -58,15 +58,12 @@ export default function Navbar() {
 						aria-label="close sidebar"
 						className="drawer-overlay"
 					></label>
-					<ul className="menu w-72 border border-black rounded rounded-br-xl bg-white">
+					<ul className="menu w-72 border min-h-full border-black rounded rounded-br-xl bg-white">
 						{/* Sidebar content here */}
 							<div className="hover:bg-transparent w-full flex items-center justify-center mx-auto">
 								<LogoNavbar />
 							</div>
 								<span className="border border-b-2 border-black my-5" ></span>
-						{/* <li className="">
-						<span className="text-black font-bold text-lg divide-black"></span>
-						</li> */}
 						<NavigationNavbar isLogedIn={isLogedIn} />
 					</ul>
 				</div>

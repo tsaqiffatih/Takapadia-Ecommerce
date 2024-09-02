@@ -1,17 +1,16 @@
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 interface BannerProps {
-  imageUrl: string;
+  imageUrl: string | StaticImageData;
   altText: string;
 }
 
 function BannerPromo({ imageUrl, altText }: BannerProps) {
   return (
-    <div className="banner-promo mt-2 mx-2 flex mb-2 h-72 md:h-96 lg:h-72 relative">
+    <div className="banner-promo mt-2 mx-2 flex h-96 md:h-1/2 md:w-1/2 lg:h-1/2 lg:w-1/2 ">
       <Image
         src={imageUrl}
         alt={altText}
-        fill
         style={{ objectFit: "cover" }}
         className="z-0"
       />

@@ -1,8 +1,8 @@
 export default function About() {
 	return (
 		<>
-			<div className="hero min-h-96">
-				<div className="hero-content text-center md:text-left">
+			<div className="hero md:w-1/2 min-h-96">
+				<div className="hero-content text-left md:text-left">
 					<div className="">
 						<h1 className="text-5xl font-bold text-left ">Taka-Pedia</h1>
 						<p className="text-lg font-semibold mt-4">

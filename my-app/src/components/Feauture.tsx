@@ -26,14 +26,14 @@ export default function Feature() {
 	return (
 		<>
 			<div className="mt-3">
-				<p className="font-bold text-4xl mb-1">Featured Products</p>
+				<p className="font-bold text-4xl mb-1">Featured Products : </p>
 				{products.length != 0 ? (
 					<div className="m-2 mb-1 overflow-x-auto scroll-container">
 						<div className="flex space-x-4 ">
 							{products.map((product, index) => (
 								<div
 									key={index}
-									className="card min-w-80 image-full "
+									className="card min-w-56 md:min-w-80 image-full "
 								>
 									<figure>
 										<Image
